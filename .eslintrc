@@ -1,0 +1,56 @@
+{
+  "extends": [
+    "airbnb",
+    "prettier/react",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["react"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [".js", "jsx"] }],
+    "react/prefer-stateless-function": "off",
+    "react/sort-comp": [
+      1,
+      {
+        "order": [
+          "state",
+          "render",
+          "static-methods",
+          "lifecycle",
+          "everything-else"
+        ]
+      }
+    ],
+    "react/forbid-prop-types": "off",
+    "prettier/prettier": "error",
+    "class-methods-use-this": "off",
+    "no-use-before-define": "off",
+    "no-underscore-dangle": "off",
+    "import/prefer-default-export": "off",
+    "no-nested-ternary": "off",
+    "camelcase": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to", "hrefLeft", "hrefRight"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ]
+  }
+}

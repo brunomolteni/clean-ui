@@ -1,0 +1,233 @@
+.Tooltip {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+}
+.Tooltip > .Tooltip__Text {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.18s ease-out 0.18s;
+  text-indent: 0;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 0.3em 1em;
+  position: absolute;
+  white-space: nowrap;
+  color: $blue-gray;
+  border: 1px solid $light-gray;
+  border-radius: $global-radius;
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+
+.Tooltip:before {
+  width: 0.7em;
+  height: 0.7em;
+  background-color: #ffffff;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.18s ease-out 0.18s;
+  content: "";
+  position: absolute;
+  z-index: 99;
+  border: 1px solid $light-gray;
+  border-color: transparent $light-gray $light-gray transparent;
+  box-shadow: 1px 1px 3px -2px rgba(0, 0, 0, 0.5);
+}
+.Tooltip:hover:before,
+.Tooltip:hover > .Tooltip__Text {
+  opacity: 1;
+  pointer-events: none;
+}
+
+// TOP
+
+.Tooltip.--top > .Tooltip__Text {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 10px;
+  transform: translate(-50%, 4px);
+  transform-origin: top;
+}
+.Tooltip.--top:before {
+  bottom: 100%;
+  left: 50%;
+  top: -17px;
+  transform: translate(-50%, 4px) rotate(45deg);
+  transform-origin: center;
+}
+.Tooltip.--top:hover > .Tooltip__Text {
+  transform: translate(-50%, 0);
+}
+.Tooltip.--top:hover:before {
+  transform: translate(-50%, 0) rotate(45deg);
+}
+
+// BOTTOM
+
+.Tooltip.--bottom > .Tooltip__Text {
+  left: 50%;
+  margin-top: 10px;
+  top: 100%;
+  transform: translate(-50%, calc(4px * -1));
+}
+.Tooltip.--bottom:before {
+  left: 50%;
+  bottom: -17px;
+  transform: translate(-50%, calc(4px * -1)) rotate(225deg);
+  transform-origin: center;
+  box-shadow: 0px 1px 3px -2px rgba(0, 0, 0, 0.5);
+}
+.Tooltip.--bottom:hover > .Tooltip__Text {
+  transform: translate(-50%, 0);
+}
+.Tooltip.--bottom:hover:before {
+  transform: translate(-50%, 0) rotate(225deg);
+}
+
+// LEFT
+
+.Tooltip.--left > .Tooltip__Text {
+  margin-right: 15px;
+  right: 100%;
+  top: 50%;
+  transform: translate(4px, -50%);
+}
+.Tooltip.--left:before {
+  right: calc(100% + 0.65em);
+  top: 50%;
+  transform: translate(4px, -50%) rotate(-45deg);
+  box-shadow: 0px 1px 3px -2px rgba(0, 0, 0, 0.5);
+}
+.Tooltip.--left:hover > .Tooltip__Text {
+  transform: translate(0, -50%);
+}
+.Tooltip.--left:hover:before {
+  transform: translate(0, -50%) rotate(-45deg);
+}
+.Tooltip.--right > .Tooltip__Text {
+  left: 100%;
+  margin-left: 15px;
+  top: 50%;
+  transform: translate(calc(4px * -1), -50%);
+}
+.Tooltip.--right:before {
+  left: calc(100% + 0.65em);
+  top: 50%;
+  transform: translate(calc(4px * -1), -50%) rotate(135deg);
+  box-shadow: 1px 0px 3px -2px rgba(0, 0, 0, 0.5);
+}
+.Tooltip.--right:hover > .Tooltip__Text {
+  transform: translate(0, -50%);
+}
+.Tooltip.--right:hover:before {
+  transform: translate(0, -50%) rotate(135deg);
+}
+.Tooltip.--small > .Tooltip__Text {
+  white-space: normal;
+  width: 80px;
+}
+.Tooltip.--medium > .Tooltip__Text {
+  white-space: normal;
+  width: 150px;
+}
+.Tooltip.--large > .Tooltip__Text {
+  white-space: normal;
+  width: 260px;
+}
+.Tooltip.--xlarge > .Tooltip__Text {
+  white-space: normal;
+  width: 380px;
+}
+@media screen and (max-width: 768px) {
+  .Tooltip.--xlarge > .Tooltip__Text {
+    white-space: normal;
+    width: 90vw;
+  }
+}
+.Tooltip.--fit > .Tooltip__Text {
+  white-space: normal;
+  width: 100%;
+}
+.Tooltip.--noWrap > .Tooltip__Text {
+  white-space: nowrap;
+  width: auto;
+}
+
+.Tooltip.--top-left > .Tooltip__Text {
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 10px;
+  transform: translate(0, 4px);
+  transform-origin: top;
+}
+.Tooltip.--top-left:before {
+  bottom: 100%;
+  left: 12px;
+  top: -1.1em;
+  transform: translate(0, 4px) rotate(45deg);
+  transform-origin: center;
+}
+.Tooltip.--top-left:hover > .Tooltip__Text {
+  transform: translate(0, 0);
+}
+.Tooltip.--top-left:hover:before {
+  transform: translate(0, 0) rotate(45deg);
+}
+.Tooltip.--top-right > .Tooltip__Text {
+  bottom: 100%;
+  right: 0;
+  margin-bottom: 10px;
+  transform: translate(0, 4px);
+  transform-origin: top;
+}
+.Tooltip.--top-right:before {
+  bottom: 100%;
+  right: 12px;
+  top: -1.1em;
+  transform: translate(0, 4px) rotate(45deg);
+  transform-origin: center;
+}
+.Tooltip.--top-right:hover > .Tooltip__Text {
+  transform: translate(0, 0);
+}
+.Tooltip.--top-right:hover:before {
+  transform: translate(0, 0) rotate(45deg);
+}
+.Tooltip.--bottom-left > .Tooltip__Text {
+  left: 0;
+  margin-top: 10px;
+  top: 100%;
+  transform: translate(0, calc(4px * -1));
+}
+.Tooltip.--bottom-left:before {
+  left: 12px;
+  bottom: -1.1em;
+  transform: translate(0, calc(4px * -1)) rotate(225deg);
+  transform-origin: center;
+  box-shadow: 0px 1px 3px -2px rgba(0, 0, 0, 0.5);
+}
+.Tooltip.--bottom-left:hover > .Tooltip__Text {
+  transform: translate(0, 0);
+}
+.Tooltip.--bottom-left:hover:before {
+  transform: translate(0, 0) rotate(225deg);
+}
+.Tooltip.--bottom-right > .Tooltip__Text {
+  right: 0;
+  margin-top: 10px;
+  top: 100%;
+  transform: translate(0, calc(4px * -1));
+}
+.Tooltip.--bottom-right:before {
+  right: 12px;
+  bottom: -1.1em;
+  transform: translate(0, calc(4px * -1), -50%) rotate(225deg);
+  box-shadow: 1px 0px 3px -2px rgba(0, 0, 0, 0.5);
+}
+.Tooltip.--bottom-right:hover > .Tooltip__Text {
+  transform: translate(0, 0);
+}
+.Tooltip.--bottom-right:hover:before {
+  transform: translate(0, 0) rotate(225deg);
+}

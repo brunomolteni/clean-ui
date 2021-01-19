@@ -1,0 +1,13 @@
+.Spinner:not(.--icon) {
+  margin: 25vh 0;
+}
+.Spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__description-text {
+    padding: 10px;
+    text-align: center;
+  }
+}

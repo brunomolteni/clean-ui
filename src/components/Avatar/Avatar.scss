@@ -1,0 +1,50 @@
+.Avatar {
+  width: 60px;
+  height: 60px;
+  margin: 0 20px;
+  text-align: center;
+  border-radius: 50%;
+  background: $light-gray;
+  display: inline-block;
+  float: left;
+  overflow: hidden;
+
+  &.--big {
+    height: 100px;
+    width: 100px;
+  }
+
+  &.--medium {
+    height: 45px;
+    width: 45px;
+  }
+
+  &.--small {
+    width: 30px;
+    height: 30px;
+  }
+
+  &.--initials {
+    text-align: center;
+    display: inline-block;
+    color: white;
+    background-color: $blue-gray;
+    line-height: 60px;
+
+    span {
+      font-weight: bold;
+    }
+
+    &.--big {
+      line-height: 100px;
+    }
+
+    &.--medium {
+      line-height: 45px;
+    }
+
+    &.--small {
+      line-height: 30px;
+    }
+  }
+}

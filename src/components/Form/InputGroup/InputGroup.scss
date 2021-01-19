@@ -1,0 +1,23 @@
+// repeated selector to up specificity, dont delete
+.Form .InputGroup.InputGroup {
+  display: flex;
+  margin-bottom: 10px;
+  & > *:first-child {
+    input,
+    .ant-input-number {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  & > *:last-child {
+    input,
+    .ant-input-number {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+.ant-radio-inner::after {
+  left: 4px !important;
+  top: 4px !important;
+}

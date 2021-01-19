@@ -1,0 +1,62 @@
+// Variables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Breakpoints
+$bp-larger-than-mobile: "min-width: 400px" !default;
+$bp-larger-than-phablet: "min-width: 550px" !default;
+$bp-larger-than-tablet: "min-width: 750px" !default;
+$bp-larger-than-desktop: "min-width: 1000px" !default;
+$bp-larger-than-desktophd: "min-width: 1200px" !default;
+
+// Colors
+
+$blue: #1b91f5 !default;
+$green: #02c28a !default;
+$orange: #ff5f3a !default;
+$yellow: #ffd369 !default;
+$white: #fff;
+$light-blue: #0dcdde !default;
+$light-gray: #d9d9dc !default;
+$blue-gray: #8e9aa1;
+$dark-blue: #262d43 !default;
+$dark-gray: #34373a !default;
+$dark-green: #00825c !default;
+$pink: #f73469 !default;
+$red: #F34E63 !default;
+
+$primary-color: #1b91f5 !default;
+$primary-opacity: rgba(27, 145, 245, 0.5);
+$secondary-color: lighten($dark-gray, 13.5%) !default;
+$link-color: #1b91f5 !default;
+$font-color: #262d43 !default;
+
+$background-color: #f9f9f9 !default;
+$background: #f9f9f9 !default;
+$border-color: darken($background,3%);
+
+$header-color: rgb(38, 45, 67) !default;
+
+$standard-box-shadow:0 1px 1px 0px rgba(0,0,0, 0.25);
+$highlight-box-shadow:0 1px 2px 0px rgba(0,0,0, 0.5);
+
+// Typography
+// $font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+//   sans-serif !default;
+$font-family-headers: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica,
+  Arial, sans-serif !default;
+$font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+//Grid Variables
+$container-width: 98% !default;
+$container-width-larger-than-mobile: 94% !default;
+$container-width-larger-than-phablet: 90% !default;
+$total-columns: 12 !default;
+$column-width: 100 / $total-columns !default; // calculates individual column width based off of # of columns
+
+$column-margin: 4% !default; // space between columns
+
+// Misc
+$global-radius: 4px !default;
+
+// Sidebar width
+$sidebar-width: 225px;

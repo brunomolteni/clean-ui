@@ -1,0 +1,29 @@
+.ButtonGroup {
+  box-shadow: $standard-box-shadow;
+  border-radius: 4px;
+  .Button {
+    box-shadow: none;
+    flex: 1;
+    &:focus,
+    &:hover {
+      box-shadow: none;
+    }
+  }
+  .Button:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-width: 0px;
+    &:focus,
+    &:hover {
+      border-right-width: 1px;
+
+      & + .Button {
+        border-left-width: 0px;
+      }
+    }
+  }
+  .Button:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

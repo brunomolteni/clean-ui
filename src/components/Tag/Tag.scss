@@ -1,0 +1,77 @@
+.Tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 0.9em;
+  line-height: 1em;
+  vertical-align: middle;
+  background: $light-gray;
+  position: relative;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  white-space: nowrap;
+
+  &.--positive,
+  &.--negative,
+  &.--orange,
+  &.--yellow,
+  &.--green,
+  &.--blue {
+    &,
+    & .Icon {
+      color: #fff;
+    }
+  }
+  &.--positive {
+    background: $blue;
+  }
+  &.--negative {
+    background: $orange;
+  }
+  &.--orange {
+    background: $orange;
+  }
+  &.--yellow {
+    background: $yellow;
+  }
+  &.--green {
+    background: $green;
+  }
+  &.--blue {
+    background: $blue;
+  }
+  &.--gray {
+    background: $light-gray;
+
+    &,
+    & .Icon {
+      color: $dark-blue;
+    }
+  }
+
+  &.--checked {
+    padding-left: 20px;
+
+    .Icon {
+      display: inline-block;
+      margin-left: -12px;
+      margin-right: 6px;
+      font-size: 0.75em;
+    }
+  }
+  &.--tiny {
+    font-size: 0.75em;
+    padding: 3px 8px;
+    // font-weight: bold;
+    line-height: 1.1em;
+
+    &.--checked {
+      padding-left: 16px;
+    }
+  }
+  .Icon {
+    vertical-align: middle;
+  }
+}

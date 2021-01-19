@@ -1,0 +1,112 @@
+.Button {
+  color: white;
+  font-weight: 600;
+  font-size: 0.8em;
+  padding: 10px 20px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  height: 40px;
+  position: relative;
+  box-shadow: $standard-box-shadow;
+
+  &:focus,
+  &:hover {
+    outline: none;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  &.--active {
+    background-color: $blue;
+    &:focus,
+    &:hover {
+      background-color: darken($blue, 10);
+      box-shadow: $highlight-box-shadow;
+    }
+  }
+  &.--dark {
+    background-color: $dark-blue;
+    &:focus,
+    &:hover {
+      background-color: darken($dark-blue, 10);
+      box-shadow: $highlight-box-shadow;
+    }
+  }
+  &.--ghost {
+    color: $font-color;
+    border-color: $border-color;
+    background-color: $white;
+    box-shadow: $standard-box-shadow;
+
+    &:focus,
+    &:hover {
+      color: $font-color;
+      border: 1px solid $light-gray;
+      box-shadow: $highlight-box-shadow;
+    }
+  }
+  &.--archived {
+    background-color: $orange;
+    box-shadow: $standard-box-shadow;
+
+    &:focus,
+    &:hover {
+      background-color: darken($orange, 10);
+    }
+  }
+  &.--scheduled {
+    background-color: $green;
+    box-shadow: $standard-box-shadow;
+
+    &:focus,
+    &:hover {
+      background-color: darken($green, 10);
+    }
+  }
+  &.--tiny {
+    height: 20px;
+    padding: 0 15px;
+    font-size: 0.75em;
+
+    .Spinner {
+      top: 0;
+    }
+  }
+
+  &.--big {
+    height: 48px;
+    padding: 0 48px;
+    font-size: 1em;
+  }
+
+  &.--small {
+    font-size: 0.75em;
+    height: 28px;
+    padding: 0 15px;
+    &.--loading {
+      padding-right: 38px;
+    }
+
+    .Icon {
+      transform: translateY(0.2em) translateX(0.2em);
+      margin: 0 5px;
+      font-size: 0.8em;
+    }
+  }
+  &.--loading {
+    padding-right: 50px;
+    pointer-events: none;
+    cursor: progress;
+  }
+  .Spinner {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    margin: 0;
+    transform: none;
+  }
+}

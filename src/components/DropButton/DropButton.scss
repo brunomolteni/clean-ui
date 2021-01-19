@@ -1,0 +1,107 @@
+.DropButton {
+  position: relative;
+  display: inline-block;
+
+  & > .Button {
+    overflow: hidden;
+  }
+
+  &.--bottom &__list {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.--top &__list {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &.--right &__list {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+  }
+  &.--left &__list {
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+  }
+  &.--left-aligned.--bottom &__list,
+  &.--left-aligned.--top &__list {
+    transform: translateX(0);
+    left: 0;
+  }
+  &.--right-aligned.--bottom &__list,
+  &.--right-aligned.--top &__list {
+    transform: translateX(0);
+    right: 0;
+    left: auto;
+  }
+  &__list {
+    display: none;
+    pointer-events: none;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    overflow-y: auto;
+    max-height: 50vh;
+    padding: 0;
+    background: white;
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    max-width: 225px;
+    min-width: 225px;
+    z-index: 10;
+    line-height: 1.3;
+    vertical-align: middle;
+    text-align: left;
+    font-weight: normal;
+    color: $font-color;
+    transition: opacity 0.2s ease-in-out;
+    box-shadow: $standard-box-shadow;
+
+    &.loading-cursor,
+    &.loading-cursor a {
+      cursor: progress;
+    }
+
+    .IconText {
+      min-height: 0;
+      // line-height: 1;
+    }
+  }
+  &:not(.--clickable):hover &__list,
+  &.--clickable.--open &__list {
+    display: block;
+    pointer-events: auto;
+  }
+  &__item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    &:not(:last-child) {
+      border-bottom: 1px solid $light-gray;
+    }
+
+    &:focus,
+    &:hover {
+      background: darken($background, 5%);
+      color: $font-color;
+    }
+
+    a,
+    a:hover {
+      color: $font-color;
+    }
+    a {
+      padding: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hideDropButtonItem {
+      display: none;
+    }
+  }
+}

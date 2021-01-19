@@ -1,0 +1,26 @@
+.Input__input.InputText {
+  &,
+  & input,
+  & textarea {
+    color: $font-color;
+    font-weight: normal;
+
+    &::-webkit-input-placeholder {
+      color: $blue-gray;
+    }
+  }
+  &.--noBorder, // duplicate selector to up specificity
+  &.--noBorder input,
+  &.--noBorder textarea {
+    padding: 0;
+    border: none;
+    background: transparent;
+    margin: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    &:hover,
+    &:focus {
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.Timeline {
+  padding-left: 20px;
+  margin-left: 5px;
+
+  &__item {
+    margin-bottom: 20px;
+    position: relative;
+    list-style: none;
+
+    .Icon {
+      margin-right: 4px;
+    }
+  }
+  &__dot {
+    position: absolute;
+    left: -25px;
+    font-size: 1.2rem;
+    top: 4px;
+  }
+  &__year {
+    font-size: 0.9em;
+  }
+}

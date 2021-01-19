@@ -1,0 +1,55 @@
+.IconCircle {
+  color: $background;
+  width: 1.6em;
+  min-width: 1.6em;
+  max-width: 1.6em;
+  height: 1.6em;
+  min-height: 1.6em;
+  max-height: 1.6em;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  i {
+    margin-top: 0.25em;
+  }
+}
+
+$IconTwoToneSize: 2em;
+$IconTwoToneAlpha: 0.2;
+
+.IconTwoTone {
+  width: $IconTwoToneSize;
+  min-width: $IconTwoToneSize;
+  max-width: $IconTwoToneSize;
+  height: $IconTwoToneSize;
+  min-height: $IconTwoToneSize;
+  max-height: $IconTwoToneSize;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  i {
+    margin-top: 0.25em;
+  }
+  &.blue {
+    background-color: rgba($blue, $IconTwoToneAlpha);
+  }
+  &.light-blue {
+    background-color: rgba($light-blue, $IconTwoToneAlpha);
+  }
+  &.yellow {
+    background-color: rgba($yellow, $IconTwoToneAlpha);
+  }
+  &.green {
+    background-color: rgba($green, $IconTwoToneAlpha);
+  }
+  &.blue-gray {
+    background-color: rgba($blue-gray, $IconTwoToneAlpha);
+  }
+  &.black {
+    background-color: rgba(black, $IconTwoToneAlpha);
+  }
+}

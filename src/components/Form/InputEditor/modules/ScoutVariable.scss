@@ -1,0 +1,48 @@
+.InputEditor {
+  .ql-variable {
+    pointer-events: none;
+    font-style: normal;
+    background: transparent;
+  }
+
+  .ql-editor .ql-variable > span {
+    border-radius: 6px;
+    background-color: $green;
+    color: white !important;
+    padding: 0 3px 3px;
+    margin: 0 1px;
+  }
+
+  .ql-variable.invalid > span {
+    background-color: $pink;
+  }
+}
+
+.ql-variable-list-container {
+  width: 280px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px 0 rgba(30, 30, 30, 0.08);
+}
+
+.ql-variable-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.ql-variable-list-item {
+  cursor: pointer;
+  height: 32px;
+  line-height: 32px;
+  font-size: 16px;
+  padding: 0 10px;
+  vertical-align: middle;
+}
+
+.ql-variable-list-item.selected {
+  color: $blue;
+  text-decoration: none;
+}

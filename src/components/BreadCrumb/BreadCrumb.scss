@@ -1,0 +1,11 @@
+.BreadCrumb {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .Icon {
+    font-size: 0.5em;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: $blue;
+  }
+}

@@ -1,0 +1,42 @@
+.SplitSection {
+  border-radius: 4px;
+  border: 1px solid #f9f9f9;
+  padding: 10px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: $standard-box-shadow;
+
+  &:hover {
+    box-shadow: $highlight-box-shadow;
+  }
+  &__text,
+  &__logo,
+  &__link {
+    margin-right: 20px;
+    flex: 1;
+  }
+  &__action {
+    margin-left: 20px;
+    flex: 0 0 auto;
+
+    & > * {
+      display: inline-flex;
+      margin: 0 2px 0 2px;
+    }
+  }
+  &__logo {
+    height: 30px;
+    width: auto;
+    flex: 0;
+  }
+
+  &__two-way-icon {
+    font-size: 1.2em;
+    margin-left: 10px;
+    top: 2px;
+    position: relative;
+  }
+}

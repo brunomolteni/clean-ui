@@ -1,0 +1,34 @@
+// General Input Styles
+.Input {
+  &__label {
+    display: block;
+    font-weight: bold;
+  }
+}
+.ant-form-item {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+.ant-form-item-with-help {
+  padding-bottom: 1px;
+}
+
+.ant-form-explain,
+.ant-form-extra {
+  font-size: 12px;
+}
+
+.ant-select-dropdown-menu {
+  margin: 0;
+}
+
+.CreateCustomTagModal {
+  .Modal {
+    max-width: 500px;
+  }
+  &__buttons {
+    .Button {
+      margin-right: 15px;
+    }
+  }
+}

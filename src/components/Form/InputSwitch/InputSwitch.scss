@@ -1,0 +1,25 @@
+.InputSwitch {
+  &.ant-switch {
+    margin: 2px 0px 4px 5px;
+  }
+
+  &.ant-switch-loading + .ant-form-item-children-icon {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.anticon-spin::before {
+  display: inline-block;
+  animation: loadingCircle 1s infinite linear;
+}
+.anticon-spin {
+  display: inline-block;
+  animation: loadingCircle 1s infinite linear;
+}
+
+@keyframes loadingCircle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
