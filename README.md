@@ -1,4 +1,4 @@
-# [Clean UI 🧼](https://brunomolteni.github.io/clean-ui)
+# Clean UI 🧼[(Open Demo)](https://brunomolteni.github.io/clean-ui)
 
 ### React Component Library
 
