@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import Spinner from "../Spinner";
 
-if (process.env.WEBPACK) require("./Modal.scss");
+import "./Modal.scss";
 
 const Modal = ({
   children,

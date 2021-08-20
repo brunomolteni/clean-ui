@@ -1,15 +1,41 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 
 import Modal from "./Modal";
 
-storiesOf("Modal", module)
-  .add("default", () => <Modal>Hi!</Modal>)
-  .add("small", () => <Modal size="small">Hi!</Modal>)
-  .add("tiny", () => <Modal size="tiny">Hi!</Modal>)
-  .add("loading", () => <Modal loading>Hi!</Modal>)
-  .add("loading with description", () => (
-    <Modal loading description="Fetching stuff...">
-      Hi!
-    </Modal>
-  ));
+export default {
+  title: "Modal"
+};
+
+export const Default = () => <Modal>Hi!</Modal>;
+
+Default.story = {
+  name: "default"
+};
+
+export const Small = () => <Modal size="small">Hi!</Modal>;
+
+Small.story = {
+  name: "small"
+};
+
+export const Tiny = () => <Modal size="tiny">Hi!</Modal>;
+
+Tiny.story = {
+  name: "tiny"
+};
+
+export const Loading = () => <Modal loading>Hi!</Modal>;
+
+Loading.story = {
+  name: "loading"
+};
+
+export const LoadingWithDescription = () => (
+  <Modal loading description="Fetching stuff...">
+    Hi!
+  </Modal>
+);
+
+LoadingWithDescription.story = {
+  name: "loading with description"
+};

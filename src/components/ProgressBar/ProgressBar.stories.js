@@ -1,10 +1,13 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { number } from "@storybook/addon-knobs";
 
 import ProgressBar from "./ProgressBar";
 
-storiesOf("ProgressBar", module).add("default", () => {
+export default {
+  title: "ProgressBar"
+};
+
+export const Default = () => {
   const options = {
     range: true,
     min: 0,
@@ -15,4 +18,8 @@ storiesOf("ProgressBar", module).add("default", () => {
   const atProp = number("Progress %", 60, options);
 
   return <ProgressBar at={atProp} />;
-});
+};
+
+Default.story = {
+  name: "default"
+};

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-if (process.env.WEBPACK) require("./EmptyOrError.scss");
+import "./EmptyOrError.scss";
 
 const EmptyOrError = ({ icon, headline, message, action }) => {
   let classes = ["EmptyOrError"];

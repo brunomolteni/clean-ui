@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs";
 
@@ -9,27 +8,18 @@ import Icon from "../Icon";
 const list = [
   {
     label: "Option 1",
-    action: action("clicked Option 1"),
-    key: 1
+    action: action("clicked Option 1")
   },
   {
     label: "Option 2",
-    action: action("clicked Option 2"),
-    key: 2
-  },
-  {
-    label: "Option 3",
-    action: action("clicked Option 3"),
-    key: 3
+    action: action("clicked Option 2")
   },
   {
     label: "New tab",
-    action: "https://fetcher.ai",
-    newTab: true,
-    target: "_blank",
-    key: 4
+    action: "https://google.com",
+    newTab: true
   },
-  { label: "same tab", action: "https://fetcher.ai", newTab: true, key: 5 },
+  { label: "same tab", action: "https://google.com", newTab: true },
   {
     label: "Interested",
     checked: true,
@@ -37,15 +27,18 @@ const list = [
     hoverLabel: (
       <Fragment>
         Undo
-        <Icon icon="replay" shape="circle" circleColor="blue-gray" />
+        <Icon icon="replay" shape="circle" />
       </Fragment>
     ),
-    hoverAction: action("clicked Undo"),
-    key: 5
+    hoverAction: action("clicked Undo")
   }
 ];
 
-storiesOf("DropButton", module).add("default", () => {
+export default {
+  title: "DropButton"
+};
+
+export const Default = () => {
   const positionProp =
     select("Position", [null, "top", "right", "left", "bottom"], null) ||
     undefined;
@@ -67,4 +60,8 @@ storiesOf("DropButton", module).add("default", () => {
       {clickToShow ? "Click to show" : "Hover to show"}
     </DropButton>
   );
-});
+};
+
+Default.story = {
+  name: "default"
+};

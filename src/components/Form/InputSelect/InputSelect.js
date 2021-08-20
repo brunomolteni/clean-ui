@@ -9,7 +9,7 @@ import { InputBase, validationProps } from "../InputBase";
 import Button from "../../Button";
 import { useModal } from "../../Modal";
 
-if (process.env.WEBPACK) require("./InputSelect.scss");
+import "./InputSelect.scss";
 
 const { Option } = Select;
 

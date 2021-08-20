@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-if (process.env.WEBPACK) require("./Stack.scss");
+import "./Stack.scss";
 
 const Stack = props => {
   let classes = ["Stack"];

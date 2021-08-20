@@ -1,12 +1,15 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, select, boolean } from "@storybook/addon-knobs";
 
 import Button from "./Button";
 import Icon from "../Icon";
 
-storiesOf("Button", module).add("default", () => {
+export default {
+  title: "Button"
+};
+
+export const Default = () => {
   const onClickProp = action("clicked");
   const sizeProp = select("Size", [null, "big", "small", "tiny"], null);
   const variantProp = select(
@@ -32,4 +35,8 @@ storiesOf("Button", module).add("default", () => {
       </span>
     </Button>
   );
-});
+};
+
+Default.story = {
+  name: "default"
+};

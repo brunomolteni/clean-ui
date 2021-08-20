@@ -2,7 +2,7 @@ import React, { Component, useEffect } from "react";
 import PropTypes from "prop-types";
 import Input from "antd/es/input";
 
-if (process.env.WEBPACK) require("./InputGroup.scss");
+import "./InputGroup.scss";
 
 const InputGroup = ({ className, label, labelSize, ...props }) => (
   <React.Fragment>

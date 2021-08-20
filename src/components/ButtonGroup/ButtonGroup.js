@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import Button from "../Button";
 
-if (process.env.WEBPACK) require("./ButtonGroup.scss");
+import "./ButtonGroup.scss";
 
 const acceptedTypes = ["Button", "DropButton", "LinkedButton"];
 

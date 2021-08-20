@@ -4,7 +4,7 @@ import debounce from "lodash/debounce";
 
 import Spinner from "../Spinner";
 
-if (process.env.WEBPACK) require("./Button.scss");
+import "./Button.scss";
 
 const Button = props => {
   let {

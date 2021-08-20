@@ -1,5 +1,3 @@
-@import "webfonts/icons.css";
-
 html,
 body {
   width: 100%;
@@ -14,7 +12,8 @@ body {
   font-size: 1.5em;
   line-height: 1.6;
   font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   color: #262d43;
   background: #f9f9f9;
   -webkit-font-smoothing: antialiased;
@@ -159,7 +158,6 @@ p {
   color: #d9d9dc !important;
 }
 
-
 .light-blue {
   color: #0dcdde !important;
 }
@@ -185,10 +183,10 @@ p {
 }
 
 .red {
-  color: #F34E63 !important;
+  color: #f34e63 !important;
 }
 .red-bg {
-  background-color: #F34E63 !important;
+  background-color: #f34e63 !important;
 }
 
 .yellow {

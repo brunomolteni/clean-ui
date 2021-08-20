@@ -1,11 +1,14 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { text, number, boolean, select } from "@storybook/addon-knobs";
 
 import Spinner from "./Spinner";
 
-storiesOf("Spinner", module).add("default", () => {
+export default {
+  title: "Spinner"
+};
+
+export const Default = () => {
   const sizeProp = number("Size", 60);
   const widthProp = number("Width", 3);
   const descriptionProp = text("Description", "Loading...");
@@ -24,4 +27,8 @@ storiesOf("Spinner", module).add("default", () => {
       description={withDescription ? descriptionProp : undefined}
     />
   );
-});
+};
+
+Default.story = {
+  name: "default"
+};

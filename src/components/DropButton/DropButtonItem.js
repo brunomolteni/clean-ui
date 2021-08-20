@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import Icon from "../Icon";
 
 const DropButtonItem = ({
@@ -21,14 +20,14 @@ const DropButtonItem = ({
   };
   if (isAFunction(action)) itemProps.onClick = action;
   if (!isAFunction(action)) itemProps.href = action;
-  if (newTab) itemProps.target = target || "_self";
+  if (newTab) itemProps.target = "_blank" || "_self";
 
   const hoverItemProps = {
     className: !isHovered && hoverLabel ? "hideDropButtonItem" : ""
   };
   if (isAFunction(hoverAction)) hoverItemProps.onClick = hoverAction;
   if (!isAFunction(hoverAction)) hoverItemProps.href = hoverAction;
-  if (newTab) hoverItemProps.target = target || "_self";
+  if (newTab) hoverItemProps.target = "_blank" || "_self";
 
   if (isAFunction(action) || newTab) {
     return (
@@ -40,7 +39,7 @@ const DropButtonItem = ({
       >
         <a {...itemProps}>
           {label}
-          {checked && <Icon icon="check" shape="circle" circleColor="green" />}
+          {checked && <Icon icon="check" shape="circle" />}
         </a>
         {hoverLabel && <a {...hoverItemProps}>{hoverLabel}</a>}
       </span>
@@ -49,9 +48,9 @@ const DropButtonItem = ({
 
   return (
     <span className="DropButton__item tiny-text">
-      <Link to={action} {...itemProps} key={label}>
+      <a href={action} {...itemProps} key={label}>
         {label}
-      </Link>
+      </a>
     </span>
   );
 };

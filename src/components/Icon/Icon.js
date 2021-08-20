@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Spinner from "../Spinner";
 
-if (process.env.WEBPACK) require("./Icon.scss");
+import "./Icon.scss";
 
 const Icon = props => {
   const { type, icon, className, align, loading, ...rest } = props;

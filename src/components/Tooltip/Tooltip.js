@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
-if (process.env.WEBPACK) require("./Tooltip.scss");
+import "./Tooltip.scss";
 
 const Tooltip = ({ text, position, length, children, stayOpen, className }) => (
   <Fragment>

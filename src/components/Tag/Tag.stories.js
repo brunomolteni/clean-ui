@@ -1,10 +1,13 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { boolean, radios } from "@storybook/addon-knobs";
 
 import Tag from "./Tag";
 
-storiesOf("Tag", module).add("default", () => {
+export default {
+  title: "Tag"
+};
+
+export const Default = () => {
   const style = radios(
     "Style",
     {
@@ -40,4 +43,8 @@ storiesOf("Tag", module).add("default", () => {
       Programming
     </Tag>
   );
-});
+};
+
+Default.story = {
+  name: "default"
+};

@@ -6,7 +6,7 @@ import "antd/es/switch/style/index.css";
 
 import { InputBase, FormInputBase } from "../InputBase";
 
-if (process.env.WEBPACK) require("./InputSwitch.scss");
+import "./InputSwitch.scss";
 
 const InputSwitch = props => (
   <InputBase Component={Switch} className="InputSwitch" {...props} />

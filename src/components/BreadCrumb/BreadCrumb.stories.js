@@ -1,5 +1,4 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
 import BreadCrumb from "./BreadCrumb";
@@ -24,6 +23,12 @@ const options = [
   { label: "Software Developer", key: 3 }
 ];
 
-storiesOf("BreadCrumb", module).add("default", () => (
-  <BreadCrumb options={options} />
-));
+export default {
+  title: "BreadCrumb"
+};
+
+export const Default = () => <BreadCrumb options={options} />;
+
+Default.story = {
+  name: "default"
+};

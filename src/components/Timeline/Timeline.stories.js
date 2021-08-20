@@ -1,5 +1,4 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
 import Timeline from "./Timeline";
@@ -49,6 +48,20 @@ const schools = [
   }
 ];
 
-storiesOf("Timeline", module)
-  .add("experience", () => <Timeline items={companies} />)
-  .add("education", () => <Timeline items={schools} colorClass="light-gray" />);
+export default {
+  title: "Timeline"
+};
+
+export const Experience = () => <Timeline items={companies} />;
+
+Experience.story = {
+  name: "experience"
+};
+
+export const Education = () => (
+  <Timeline items={schools} colorClass="light-gray" />
+);
+
+Education.story = {
+  name: "education"
+};

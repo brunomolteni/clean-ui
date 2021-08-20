@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Avatar from "../Avatar";
 
-if (process.env.WEBPACK) require("./SplitSection.scss");
+import "./SplitSection.scss";
 
 const SplitSection = ({ className, logo, avatar, action, link, children }) => {
   const classes = ["SplitSection"];

@@ -1,11 +1,14 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { select, boolean, text } from "@storybook/addon-knobs";
 
 import Tooltip from "./Tooltip";
 import Icon from "../Icon";
 
-storiesOf("Tooltip", module).add("default", () => {
+export default {
+  title: "Tooltip"
+};
+
+export const Default = () => {
   const tooltipText = text("Tooltip text", "Hi there!");
   const ContentText = text("Text", "Hover over Here");
   const showIcon = boolean("Show Icon", false);
@@ -35,4 +38,8 @@ storiesOf("Tooltip", module).add("default", () => {
       {showIcon ? <Icon /> : ContentText}
     </Tooltip>
   );
-});
+};
+
+Default.story = {
+  name: "default"
+};

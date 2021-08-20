@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Button from "../Button";
 import DropButtonItem from "./DropButtonItem";
 
-if (process.env.WEBPACK) if (process.env.WEBPACK) require("./DropButton.scss");
+import "./DropButton.scss";
 
 const DropButton = props => {
   const [isOpen, toggleOpen] = useState(false);
@@ -33,8 +33,8 @@ const DropButton = props => {
         onClick={
           clickToShow
             ? () => {
-              toggleOpen(open => !open);
-            }
+                toggleOpen(open => !open);
+              }
             : null
         }
         onBlur={

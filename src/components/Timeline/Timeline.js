@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../Icon";
 
-if (process.env.WEBPACK) require("./Timeline.scss");
+import "./Timeline.scss";
 
 const Timeline = ({ items, color = "light-gray" }) => {
   return (

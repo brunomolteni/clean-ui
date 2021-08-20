@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-if (process.env.WEBPACK) require("./Tag.scss");
+import "./Tag.scss";
 import Icon from "../Icon";
 
 const Tag = props => {

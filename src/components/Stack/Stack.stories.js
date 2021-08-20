@@ -1,11 +1,14 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { text, number, boolean, select } from "@storybook/addon-knobs";
 
 import Stack from "./Stack";
 import Button from "../Button";
 
-storiesOf("Stack", module).add("default", () => {
+export default {
+  title: "Stack"
+};
+
+export const Default = () => {
   const hasRow = boolean("Row", false);
 
   return (
@@ -24,4 +27,8 @@ storiesOf("Stack", module).add("default", () => {
       </div>
     </Stack>
   );
-});
+};
+
+Default.story = {
+  name: "default"
+};

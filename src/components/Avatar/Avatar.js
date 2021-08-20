@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-if (process.env.WEBPACK) require("./Avatar.scss");
+import "./Avatar.scss";
 
 class Avatar extends Component {
   state = {

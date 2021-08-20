@@ -4,7 +4,7 @@ import Input from "antd/es/input";
 
 import { InputBase, FormInputBase } from "../InputBase";
 
-if (process.env.WEBPACK) require("./InputText.scss");
+import "./InputText.scss";
 
 const InputText = props => (
   <InputBase Component={Input} className="InputText" {...props} />

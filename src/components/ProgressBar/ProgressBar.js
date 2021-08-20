@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-if (process.env.WEBPACK) require("./ProgressBar.scss");
+import "./ProgressBar.scss";
 
 const ProgressBar = props => {
   return (

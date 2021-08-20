@@ -1,5 +1,4 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
 import Button from "../Button";
@@ -13,24 +12,41 @@ const button = (
 );
 const link = <a href="#">Link</a>;
 
-storiesOf("SplitSection", module)
-  .add("default", () => (
-    <SplitSection action={button}>Here's some text</SplitSection>
-  ))
-  .add("with Logo", () => (
-    <SplitSection
-      logo="https://cdn.iconscout.com/icon/free/png-256/ghostbusters-282377.png"
-      action={button}
-    >
-      Here's some text
-    </SplitSection>
-  ))
-  .add("with Link", () => (
-    <SplitSection
-      logo="https://cdn.iconscout.com/icon/free/png-256/ghostbusters-282377.png"
-      action={button}
-      link={link}
-    >
-      Here's some text
-    </SplitSection>
-  ));
+export default {
+  title: "SplitSection"
+};
+
+export const Default = () => (
+  <SplitSection action={button}>Here's some text</SplitSection>
+);
+
+Default.story = {
+  name: "default"
+};
+
+export const WithLogo = () => (
+  <SplitSection
+    logo="https://cdn.iconscout.com/icon/free/png-256/ghostbusters-282377.png"
+    action={button}
+  >
+    Here's some text
+  </SplitSection>
+);
+
+WithLogo.story = {
+  name: "with Logo"
+};
+
+export const WithLink = () => (
+  <SplitSection
+    logo="https://cdn.iconscout.com/icon/free/png-256/ghostbusters-282377.png"
+    action={button}
+    link={link}
+  >
+    Here's some text
+  </SplitSection>
+);
+
+WithLink.story = {
+  name: "with Link"
+};

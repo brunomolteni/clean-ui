@@ -14,8 +14,6 @@ export { default as InputPassword } from "./InputPassword";
 
 export { default as InputSelect } from "./InputSelect";
 
-export { default as InputEditor } from "./InputEditor";
-
 export { default as InputRadio } from "./InputRadio";
 
 export { default as InputCheckbox } from "./InputCheckbox";

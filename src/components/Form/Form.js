@@ -2,18 +2,18 @@ import React, { useCallback } from "react";
 import debounce from "lodash/debounce";
 import PropTypes from "prop-types";
 import { Formik } from "formik"; // https://jaredpalmer.com/formik/docs/next/api/formik
+
 import { FormInputText } from "./InputText";
 import { FormInputPassword } from "./InputPassword";
 import { FormInputSearch } from "./InputSearch";
 import { FormInputTextArea } from "./InputTextArea";
 import InputGroup from "./InputGroup";
-import InputEditor from "./InputEditor";
 import { FormInputCheckbox } from "./InputCheckbox";
 import { FormInputRadio } from "./InputRadio";
 import { FormInputSelect } from "./InputSelect";
 import { FormInputSwitch } from "./InputSwitch";
 
-if (process.env.WEBPACK) require("./Form.scss");
+import "./Form.scss";
 
 const Form = ({
   children,
@@ -113,7 +113,6 @@ Form.InputPassword = FormInputPassword;
 Form.InputSearch = FormInputSearch;
 Form.InputTextArea = FormInputTextArea;
 Form.InputGroup = InputGroup;
-Form.InputEditor = InputEditor;
 Form.InputCheckbox = FormInputCheckbox;
 Form.InputRadio = FormInputRadio;
 Form.InputSelect = FormInputSelect;

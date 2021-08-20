@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-if (process.env.WEBPACK) require("./Spinner.scss");
+import "./Spinner.scss";
 
 const Spinner = props => {
   let classes = ["Spinner"];
